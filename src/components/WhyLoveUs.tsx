@@ -6,7 +6,7 @@ import { Icon } from "@iconify/react";
 
 export default function WhyLoveUs() {
 
-    return <div className="p-20 flex flex-col items-center gap-20 relative">
+    return <div className="p-32 flex flex-col items-center gap-20 relative">
         <div className="w-[90%] sm:w-[70%] md:w-[65%] lg:w-[40%]">
             <h1 className="text-center text-3xl md:text-4xl">Why Customers Love</h1>
             <h1 className="text-center text-3xl md:text-4xl font-bold mt-5">working with us</h1>
@@ -18,7 +18,7 @@ export default function WhyLoveUs() {
                 <Image src="/images/right-quote.svg" alt="right-quote" width={40} height={40} className="absolute bottom-0 right-0" />
             </div>
         </div>
-        <div className="w-[50%] flex justify-center gap-10">
+        <div className="w-[60%] flex justify-center gap-10 text-center">
             <div className="hidden sm:flex flex-col items-center gap-2 mt-2 opacity-70">
                 <Image src="https://i.pravatar.cc/85" className="rounded-full" alt="avatar" width={85} height={85} />
                 <Rating>

@@ -1,5 +1,7 @@
 import Main from "@/components/Main";
+import RecentProjects from "@/components/RecentProjects";
 import Services from "@/components/Services";
+import WaysBuilding from "@/components/WaysBuilding";
 import WhyLoveUs from "@/components/WhyLoveUs";
 
 export default function Home() {
@@ -8,6 +10,8 @@ export default function Home() {
       <Main />
       <Services />
       <WhyLoveUs />
+      <RecentProjects />
+      {/* <WaysBuilding /> */}
     </main>
   );
 }

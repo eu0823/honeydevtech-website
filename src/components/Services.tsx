@@ -30,9 +30,9 @@ interface I_Service {
 
 export default function Services() {
 
-    return <div className="w-full py-16 relative bg-gray-50 flex justify-center items-center flex-col">
+    return <div className="w-full py-32 relative bg-gray-100 flex justify-center items-center flex-col">
         <h1 className="text-2xl sm:text-3xl lg:text-4xl text-center font-bold">Services we offer</h1>
-        <div className="container grid grid-cols-1 md:grid-cols-3 gap-10 mt-16">
+        <div className="container grid grid-cols-1 md:grid-cols-3 gap-10 mt-24">
             {
                 services.map((item: I_Service, index: number) => (
                     <div key={index} className="py-5 px-10 border-gradient rounded-lg">
