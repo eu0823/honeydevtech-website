@@ -15,7 +15,7 @@ export default function Main() {
                     We help build and manage a team of world-class developers to bring your vision to life
                 </p>
                 <div className="mt-5 flex justify-center sm:justify-start sm:text-left w-full">
-                    <Button color="blue">Let's get started!</Button>
+                    <Button color="blue">{"Let's get started!"}</Button>
                 </div>
             </div>
             <div className="order-1 sm:order-2 flex justify-center">
