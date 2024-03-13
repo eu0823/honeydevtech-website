@@ -6,7 +6,7 @@ import { Icon } from "@iconify/react";
 
 export default function WhyLoveUs() {
 
-    return <div className="p-32 flex flex-col items-center gap-20 relative">
+    return <div className="flex flex-col py-20 items-center gap-20 relative">
         <div className="w-[90%] sm:w-[70%] md:w-[65%] lg:w-[40%]">
             <h1 className="text-center text-3xl md:text-4xl">Why Customers Love</h1>
             <h1 className="text-center text-3xl md:text-4xl font-bold mt-5">working with us</h1>
@@ -80,12 +80,10 @@ export default function WhyLoveUs() {
                 <h3 className="text-sm">Janet Cosmetics</h3>
             </div>
         </div>
-        <div className="absolute right-20 border rounded-full top-[45%] border-purple-700 p-2 cursor-pointer hover:bg-gray-100 active:bg-gray-200">
-            {/* @ts-ignore */}
+        <div className="absolute right-5 md:right-20 border rounded-full top-[45%] border-purple-700 p-2 cursor-pointer hover:bg-gray-100 active:bg-gray-200">
             <Icon icon="maki:arrow" width={32} height={32} style={{ color: "#57007B" }} />
         </div>
-        <div className="absolute left-20 border rounded-full top-[45%] border-purple-700 p-2 cursor-pointer hover:bg-gray-100 active:bg-gray-200">
-            {/* @ts-ignore */}
+        <div className="absolute left-5 md:left-20 border rounded-full top-[45%] border-purple-700 p-2 cursor-pointer hover:bg-gray-100 active:bg-gray-200">
             <Icon icon="mingcute:arrow-left-fill" width={32} height={32} style={{ color: "#57007B" }} />
         </div>
         <div className="rounded-full w-[72px] h-[72px] absolute top-[-36px] left-[20%] -z-10 bg-gradient-to-r from-blue-500 to-green-500"></div>
