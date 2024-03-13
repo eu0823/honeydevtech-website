@@ -1,4 +1,5 @@
 import Main from "@/components/Main";
+import OurApproach from "@/components/OurApproach";
 import RecentProjects from "@/components/RecentProjects";
 import Services from "@/components/Services";
 import WaysBuilding from "@/components/WaysBuilding";
@@ -12,6 +13,7 @@ export default function Home() {
       <WhyLoveUs />
       <RecentProjects />
       <WaysBuilding />
+      <OurApproach />
     </main>
   );
 }
