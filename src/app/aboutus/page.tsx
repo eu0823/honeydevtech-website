@@ -10,9 +10,7 @@ export default function AboutUs() {
                         Who we are
                     </h1>
                     <p className="text-lg max-w-[800px] text-center">
-                        We are a team of passionate developers who love building great software.
-                        We are passionate about building great software for our clients.
-                        Working perfectly with our clients.
+                        {"We are a team of passionate developers who love building great software. We are passionate about building great software for our clients. Working perfectly with our clients."}
                     </p>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 px-32">

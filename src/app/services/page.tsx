@@ -28,7 +28,7 @@ export default function Services() {
                     </div>
                     <h3 className="mb-2 text-xl font-bold dark:text-white">Web Development</h3>
                     <p className="text-gray-500 dark:text-gray-400">
-                        At HoneyDevTech, we harness the latest web frameworks and technologies to create innovative, robust, and scalable digital solutions that truly reflect your business identity and propel your brand forward.
+                        {"At HoneyDevTech, we harness the latest web frameworks and technologies to create innovative, robust, and scalable digital solutions that truly reflect your business identity and propel your brand forward."}
                     </p>
                 </div>
                 <div>
@@ -47,7 +47,7 @@ export default function Services() {
                     </div>
                     <h3 className="mb-2 text-xl font-bold dark:text-white">Blockchain Development</h3>
                     <p className="text-gray-500 dark:text-gray-400">
-                        At HoneyDevTech, we leverage cutting-edge blockchain technologies to design and develop secure, transparent, and highly efficient decentralized solutions tailored to revolutionize your business operations.
+                        {"At HoneyDevTech, we leverage cutting-edge blockchain technologies to design and develop secure, transparent, and highly efficient decentralized solutions tailored to revolutionize your business operations."}
                     </p>
                 </div>
                 <div>
@@ -74,7 +74,7 @@ export default function Services() {
                         Business Automation
                     </h3>
                     <p className="text-gray-500 dark:text-gray-400">
-                        HoneyDevTech provides advanced Business Automation solutions to streamline operations, reduce redundancy, and drive growth by leveraging technology to automate repetitive tasks.
+                        {"HoneyDevTech provides advanced Business Automation solutions to streamline operations, reduce redundancy, and drive growth by leveraging technology to automate repetitive tasks."}
                     </p>
                 </div>
                 <div>
@@ -94,7 +94,7 @@ export default function Services() {
                     </div>
                     <h3 className="mb-2 text-xl font-bold dark:text-white">Unreal Engine Development</h3>
                     <p className="text-gray-500 dark:text-gray-400">
-                        HoneyDevTech specializes in creating visually stunning and feature-rich 3D game development experiences using Unreal Engine's advanced programming languages and comprehensive options.
+                        {"HoneyDevTech specializes in creating visually stunning and feature-rich 3D game development experiences using Unreal Engine's advanced programming languages and comprehensive options."}
                     </p>
                 </div>
                 <div>
@@ -116,7 +116,7 @@ export default function Services() {
                         Game Development
                     </h3>
                     <p className="text-gray-500 dark:text-gray-400">
-                        Game development blends creativity, technology, and storytelling to craft immersive, interactive experiences that captivate and engage players, offering endless possibilities for innovation and entertainment from concept to launch.
+                       {" Game development blends creativity, technology, and storytelling to craft immersive, interactive experiences that captivate and engage players, offering endless possibilities for innovation and entertainment from concept to launch."}
                     </p>
                 </div>
                 <div>
@@ -135,7 +135,7 @@ export default function Services() {
                     </div>
                     <h3 className="mb-2 text-xl font-bold dark:text-white">Mobile Development</h3>
                     <p className="text-gray-500 dark:text-gray-400">
-                        Our mobile development involves creating applications for smartphones and tablets, offering enhanced user experiences and becoming an integral part of everyday life.
+                        {"Our mobile development involves creating applications for smartphones and tablets, offering enhanced user experiences and becoming an integral part of everyday life."}
                     </p>
                 </div>
             </div>
