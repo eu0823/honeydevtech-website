@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "HoneyDevTech",
   description: "Website, blockchain, unreal engine and game development company",
+  icons: {
+    icon: '/images/logo.png',
+  },
 };
 
 export default function RootLayout({
