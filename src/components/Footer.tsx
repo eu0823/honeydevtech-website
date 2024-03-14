@@ -33,7 +33,13 @@ export default function Footer() {
                     Contact us for any inquiries or to discuss how we can help you achieve your goals.
                 </p>
                 <p className="mt-2">
+                    +1 956 377 2950
+                </p>
+                <p className="mt-2">
                     +212647924544
+                </p>
+                <p className="mt-2">
+                    +44 117 318 4324
                 </p>
                 <p className="mt-2 hover:text-blue-700 hover:underline">
                     <a href="https://discord.gg/d2MNjXEFa6" target="_blank">
