@@ -13,7 +13,7 @@ export default function AboutUs() {
                         {"We are a team of passionate developers who love building great software. We are passionate about building great software for our clients. Working perfectly with our clients."}
                     </p>
                 </div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 px-32">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 px-5 lg:px-32">
                     <div className="flex flex-col gap-5">
                         <Image src="/images/aboutus/1.jpg" width={1000} height={700} alt="main" className="w-full" />
                         <h1 className="text-3xl font-semibold">Our Mission</h1>

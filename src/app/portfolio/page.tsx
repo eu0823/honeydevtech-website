@@ -6,6 +6,7 @@ type Kind = "all" | "web" | "bot" | "blockchain" | "ue" | "other";
 import { web_portfolio, blockchain_portfolio, PortfolioItem } from "./data";
 import Link from "next/link";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { Badge } from "flowbite-react";
 
 
 export default function Portfolio() {
@@ -16,16 +17,16 @@ export default function Portfolio() {
     useEffect(() => {
         switch (kind) {
             case "all":
-                setPortfolio([...web_portfolio, ...blockchain_portfolio]);
+                setPortfolio([...web_portfolio, ...blockchain_portfolio].sort(() => Math.random() - 0.5));
                 break;
             case "web":
-                setPortfolio(web_portfolio);
+                setPortfolio(web_portfolio.sort(() => Math.random() - 0.5));
                 break;
             case "bot":
                 setPortfolio([]);
                 break;
             case "blockchain":
-                setPortfolio(blockchain_portfolio);
+                setPortfolio(blockchain_portfolio.sort(() => Math.random() - 0.5));
                 break;
             case "ue":
                 setPortfolio([]);
@@ -105,16 +106,27 @@ export default function Portfolio() {
                 {
                     portfolio.map((item, index) => {
                         return (
-                            <div className="w-full h-auto rounded-lg overflow-hidden border" key={index}>
+                            <div className="w-full h-auto rounded-lg overflow-hidden border flex flex-col pb-3 gap-4 hover:border-[black] bg-gray-100 shadow-lg" key={index}>
                                 <Link href={"http://" + item.website} target="_blank">
-                                    <Image className="hover:opacity-80 cursor-pointer" src={"/images/portfolio/" + item.imageLink} width={400} height={300} alt={item.imageLink} />
+                                    <Image className="hover:opacity-80 cursor-pointer border-b" src={"/images/portfolio/" + item.imageLink} width={400} height={300} alt={item.imageLink} />
                                 </Link>
-                                <Link href={"http://" + item.website} target="_blank">
-                                    <div className="flex justify-start items-center px-4 py-2 border-t gap-2">
-                                        <Icon icon="gg:website" />
-                                        <h1 className="text-xl font-bold">{item.website}</h1>
-                                    </div>
-                                </Link>
+                                <div className="flex justify-between items-center">
+                                    <Link href={"http://" + item.website} target="_blank">
+                                        <div className="flex justify-start items-center px-4 py-2 gap-2">
+                                            <Icon icon="gg:website" />
+                                            <h1 className="text-xl font-bold">{item.website}</h1>
+                                        </div>
+                                    </Link>
+                                    <Badge size="md" color="success">Web</Badge>
+                                </div>
+                                <div className="flex gap-2 px-2 mb-2">
+                                    <Badge color="info">Bridge</Badge>
+                                    <Badge color="gray">DAO</Badge>
+                                    <Badge color="failure">React</Badge>
+                                    <Badge color="success">ExpressJS</Badge>
+                                    <Badge color="warning">Solidity</Badge>
+                                    <Badge color="indigo">Next.js</Badge>
+                                </div>
                             </div>
                         );
                     })

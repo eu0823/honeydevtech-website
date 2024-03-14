@@ -5,8 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+
+    const pathname = usePathname();
 
     const [openMenu, setOpenMenu] = useState<boolean>(false);
 
@@ -19,16 +22,28 @@ export default function Header() {
                 </div>
             </Link>
             <div className={`${!openMenu ? "hidden " : "flex "} z-[1] md:flex absolute md:relative justify-between items-center flex-col md:flex-row bg-white md:gap-10 text-md text-gray-700 w-full md:w-auto left-0`}>
-                <Link href="/aboutus" className="hover:text-blue-600 hover:font-bold w-full md:w-auto text-center hover:bg-gray-200 md:hover:bg-inherit py-3 md:py-0">
+                <Link
+                    href="/aboutus"
+                    className={`w-full md:w-auto text-center ${ pathname === "/aboutus" ? "text-blue-600 font-bold" : "" } hover:text-blue-600 font-bold hover:bg-gray-200 md:hover:bg-inherit py-3 md:py-0`}
+                >
                     About us
                 </Link>
-                <Link href="/services" className="hover:text-blue-600 hover:font-bold w-full md:w-auto text-center hover:bg-gray-200 md:hover:bg-inherit py-3 md:py-0">
+                <Link
+                    href="/services"
+                    className={`w-full md:w-auto text-center ${ pathname === "/services" ? "text-blue-600 font-bold" : "" } hover:text-blue-600 font-bold hover:bg-gray-200 md:hover:bg-inherit py-3 md:py-0`}
+                >
                     Services
                 </Link>
-                <Link href="/portfolio" className="hover:text-blue-600 hover:font-bold w-full md:w-auto text-center hover:bg-gray-200 md:hover:bg-inherit py-3 md:py-0">
+                <Link
+                    href="/portfolio"
+                    className={`w-full md:w-auto text-center ${ pathname === "/portfolio" ? "text-blue-600 font-bold" : "" } hover:text-blue-600 font-bold hover:bg-gray-200 md:hover:bg-inherit py-3 md:py-0`}
+                >
                     Portfolio
                 </Link>
-                <Link href="/" className="hover:text-blue-600 hover:font-bold w-full md:w-auto text-center hover:bg-gray-200 md:hover:bg-inherit py-3 md:py-0">
+                <Link
+                    href="/blog"
+                    className={`w-full md:w-auto text-center ${ pathname === "/blog" ? "text-blue-600 font-bold" : "" } hover:text-blue-600 font-bold hover:bg-gray-200 md:hover:bg-inherit py-3 md:py-0`}
+                >
                     Blog
                 </Link>
             </div>

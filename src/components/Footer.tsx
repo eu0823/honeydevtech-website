@@ -13,35 +13,44 @@ export default function Footer() {
                     </div>
                 </Link>
                 <div className="text-md max-w-96 mt-4">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    We offer Web, Blockchain, Automation bot, Unreal Engine and Game Development services.
                 </div>
             </div>
             <div className="col-span-1 flex flex-col gap-3">
                 <h1 className="text-xl font-bold mb-2">
                     Links
                 </h1>
-                <Link href="/" className="hover:underline">About Us</Link>
-                <Link href="/" className="hover:underline">Services</Link>
-                <Link href="/" className="hover:underline">Portfolio</Link>
-                <Link href="/" className="hover:underline">Blog</Link>
-                <Link href="/" className="hover:underline">How it Works</Link>
-                <Link href="/" className="hover:underline">Hire</Link>
+                <Link href="/aboutus" className="hover:underline">About Us</Link>
+                <Link href="/services" className="hover:underline">Services</Link>
+                <Link href="/portfolio" className="hover:underline">Portfolio</Link>
+                <Link href="/blog" className="hover:underline">Blog</Link>
             </div>
             <div className="col-span-3">
                 <h1 className="text-xl font-bold">
                     Contact us
                 </h1>
                 <p className="max-w-96 mt-4">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Contact us for any inquiries or to discuss how we can help you achieve your goals.
                 </p>
                 <p className="mt-2">
                     +212647924544
+                </p>
+                <p className="mt-2 hover:text-blue-700 hover:underline">
+                    <a href="https://discord.gg/d2MNjXEFa6" target="_blank">
+                        Discord
+                    </a>
+                </p>
+                <p className="mt-2 hover:text-blue-700 hover:underline">
+                    <a href="https://t.me/honeydevtech" target="_blank">
+                        Telegram
+                    </a>
                 </p>
             </div>
             <ul className="flex space-x-3 md:absolute right-20 bottom-20">
                 <li>
                     <a
-                        href="#"
+                        href="https://www.facebook.com/profile.php?id=61556304436322&mibextid=rS40aB7S9Ucbxw6v"
+                        target="_blank"
                         className="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
                     >
                         <svg
@@ -61,6 +70,7 @@ export default function Footer() {
                 <li>
                     <a
                         href="#"
+                        target="_blank"
                         className="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
                     >
                         <svg
@@ -79,7 +89,8 @@ export default function Footer() {
                 </li>
                 <li>
                     <a
-                        href="#"
+                        href="https://twitter.com/HoneyDevTech"
+                        target="_blank"
                         className="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
                     >
                         <svg
