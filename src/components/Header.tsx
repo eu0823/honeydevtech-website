@@ -10,7 +10,7 @@ export default function Header() {
 
     const [openMenu, setOpenMenu] = useState<boolean>(false);
 
-    return <div className="w-full bg-white shadow-xl flex justify-center">
+    return <div className="w-full bg-white shadow-xl flex justify-center fixed z-30 top-0">
         <div className="container mx-auto flex py-[10px] justify-between items-start md:items-center">
             <Link href="/">
                 <div className="flex items-center gap-2">
@@ -25,7 +25,7 @@ export default function Header() {
                 <Link href="/" className="hover:text-blue-600 hover:font-bold w-full md:w-auto text-center hover:bg-gray-200 md:hover:bg-inherit py-3 md:py-0">
                     Services
                 </Link>
-                <Link href="/" className="hover:text-blue-600 hover:font-bold w-full md:w-auto text-center hover:bg-gray-200 md:hover:bg-inherit py-3 md:py-0">
+                <Link href="/portfolio" className="hover:text-blue-600 hover:font-bold w-full md:w-auto text-center hover:bg-gray-200 md:hover:bg-inherit py-3 md:py-0">
                     Portfolio
                 </Link>
                 <Link href="/" className="hover:text-blue-600 hover:font-bold w-full md:w-auto text-center hover:bg-gray-200 md:hover:bg-inherit py-3 md:py-0">

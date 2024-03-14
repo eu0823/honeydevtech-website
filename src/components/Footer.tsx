@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
 
-    return <div className="w-full bg-white">
+    return <div className="w-full bg-white border-t">
         <div className="w-full grid sm:grid-cols-7 grid-cols-1 gap-4 sm:gap-10 py-10 px-5 sm:px-10 lg:px-48 relative justify-center md:justify-around">
             <div className="col-span-3">
                 <Link href="/">
