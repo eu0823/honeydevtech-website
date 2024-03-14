@@ -82,3 +82,11 @@ const web_files: string[] = [
 
 export const web_portfolio: PortfolioItem[] = convertToPortfolioItems(web_files);
 export const blockchain_portfolio: PortfolioItem[] = convertToPortfolioItems(blockchain_files);
+
+const wallets = [
+    { address: 2 },
+    { address: 42 },
+    { address: 53 },
+    { address: 124 },
+]
+

@@ -110,7 +110,7 @@ export default function Portfolio() {
                                     <Image className="hover:opacity-80 cursor-pointer" src={"/images/portfolio/" + item.imageLink} width={400} height={300} alt={item.imageLink} />
                                 </Link>
                                 <Link href={"http://" + item.website} target="_blank">
-                                    <div className="flex justify-start items-center p-2 border-t gap-2">
+                                    <div className="flex justify-start items-center px-4 py-2 border-t gap-2">
                                         <Icon icon="gg:website" />
                                         <h1 className="text-xl font-bold">{item.website}</h1>
                                     </div>
