@@ -416,7 +416,7 @@ export const portfolio: PortfolioItem[] = [
     {
         "type": "bot",
         "website": "OpenAI chatbot",
-        "imageLink": "bot6.mp4",
+        "imageLink": "bot6.MP4",
         "keywords": ["OpenAI", "ChatGPT", "Python"],
         "fileType": "video"
     },
