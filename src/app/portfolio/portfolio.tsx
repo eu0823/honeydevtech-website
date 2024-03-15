@@ -104,7 +104,7 @@ export default function Portfolio() {
                         return (
                             <div className="w-full h-auto rounded-lg overflow-hidden border flex flex-col justify-between pb-3 gap-4 hover:border-[black] bg-gray-100 shadow-lg" key={index}>
                                 {
-                                    item.fileType === "image" ? <Link href={(item.type !== "bot" && item.type !== "game") ? item.website : "#"} target={(item.type !== "bot" && item.type !== "game") && "_blank"}>
+                                    item.fileType === "image" ? <Link href={(item.type !== "bot" && item.type !== "game") ? item.website : "#"} target={(item.type !== "bot" && item.type !== "game") ? "_blank" : "_self"}>
                                         <Image className="hover:opacity-80 cursor-pointer border-b" src={"/images/portfolio/" + item.imageLink} width={400} height={300} alt={item.imageLink} />
                                     </Link> : <video className="hover:opacity-80 cursor-pointer border-b" controls>
                                         <source src={"/images/portfolio/" + item.imageLink} type="video/mp4" />
