@@ -25,7 +25,6 @@ export default function BackToTop(props: propTypes) {
     if (topClassName) positionClassName += topClassName + " ";
     if (bottomClassName) positionClassName += bottomClassName + " ";
 
-
     const [display, setDisplay] = useState<boolean>(false);
 
     useEffect(() => {
@@ -54,7 +53,7 @@ export default function BackToTop(props: propTypes) {
 
     return <div
         onClick={topFunction}
-        className={`fixed w-12 h-12 rounded-md ${display ? "flex" : "hidden"} justify-center items-center ${positionClassName} cursor-pointer bg-blue-600 border-3 border-blue-200 hover:opacity-90 ${className ? className : ""} z-50`}
+        className={`fixed w-12 h-12 rounded-md ${display ? "flex" : "hidden"} justify-center items-center right-12 bottom-16 cursor-pointer bg-blue-600 border-3 border-blue-200 opacity-60 hover:opacity-70 ${className ? className : ""} z-[50]`}
     >
         <svg
             xmlns="http://www.w3.org/2000/svg"

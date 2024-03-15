@@ -13,6 +13,14 @@ export default function Header() {
 
     const [openMenu, setOpenMenu] = useState<boolean>(false);
 
+    function bottomFunction() {
+        window.scrollTo({
+            top: 10000000,
+            left: 100,
+            behavior: "smooth",
+        });
+    }
+
     return <div className="w-full bg-white shadow-xl flex justify-center fixed z-30 top-0">
         <div className="container mx-auto flex py-[10px] justify-between items-start md:items-center">
             <Link href="/">
@@ -48,7 +56,7 @@ export default function Header() {
                 </Link> */}
             </div>
             <div className="flex gap-2">
-                <Button className="hidden md:flex" color="blue">
+                <Button className="hidden md:flex" color="blue" onClick={bottomFunction}>
                     Contact Us
                 </Button>
                 <Button color={openMenu ? "red" : "blue"} className="flex md:hidden z-[2]" onClick={() => setOpenMenu(!openMenu)}>

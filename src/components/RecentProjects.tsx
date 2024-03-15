@@ -1,12 +1,14 @@
 "use client"
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 type Project = {
     imageSrc: string;
     alt: string;
     title: string;
+    kind: string;
     description: string;
     bgColor: string;
     borderColor: string;
@@ -16,6 +18,7 @@ const projects: Project[] = [
     {
         "imageSrc": "/images/services/web_service.jpg",
         "alt": "case study 1",
+        "kind": "web",
         "title": "Website Development",
         "description": "Born from a vision to revolutionize the way transactions are conducted, TrustChain Technologies emerges as a pioneering force in the world of blockchain development. With unwavering dedication to excellence and a commitment to putting clients first, TrustChain Technologies strives to deliver unparalleled solutions in the realm of digital transactions. Its rapid ascent can be attributed to a rock-solid foundation built upon years of expertise and innovation. The management team boasts a collective experience of over two decades, encompassing a diverse range of industries and a deep understanding of the potential of blockchain technology.",
         "bgColor": "#F1F2FF",
@@ -24,6 +27,7 @@ const projects: Project[] = [
     {
         "imageSrc": "/images/services/blockchain_service.jpg",
         "alt": "case study 2",
+        "kind": "blockchain",
         "title": "Blockchain Development",
         "description": "Forged from a desire to reshape the future of finance and beyond, Quantum Ledger Solutions emerges as a trailblazer in the realm of blockchain development. With an unwavering commitment to pushing the boundaries of what is possible, Quantum Ledger Solutions aims to deliver cutting-edge solutions that revolutionize industries and empower individuals. Its meteoric rise is rooted in a bedrock of expertise and innovation, with a management team boasting decades of combined experience in blockchain technology. This wealth of knowledge and passion fuels Quantum Ledger Solutions' relentless pursuit of excellence and its drive to create a better, more decentralized world.",
         "bgColor": "#F0FFF7",
@@ -32,6 +36,7 @@ const projects: Project[] = [
     {
         "imageSrc": "/images/services/game_service.jpg",
         "alt": "case study 3",
+        "kind": "game",
         "title": "UE & Game Development",
         "description": "Born from a passion for immersive gaming experiences, Unreal Engine Studios is a force to be reckoned with in game development. With a commitment to pushing the boundaries of visual fidelity and gameplay innovation, they create unforgettable virtual worlds. Backed by years of technical expertise and a talented team, Unreal Engine Studios is redefining interactive entertainment.",
         "bgColor": "#FFF4F4",
@@ -50,9 +55,11 @@ const ProjectCard = ({ project }: { project: Project; }) => {
                 {project.description}
             </p>
             <div className="text-right cursor-pointer font-semibold">
-                <span className="bg-gradient-to-r from-[#57007B] to-[#F76680] text-transparent bg-clip-text">
-                    Read more &gt;
-                </span>
+                <Link href={"/portfolio?tab=" + project.kind}>
+                    <span className="bg-gradient-to-r from-[#57007B] to-[#F76680] text-transparent bg-clip-text">
+                        Read more &gt;
+                    </span>
+                </Link>
             </div>
         </div>
     </div>
@@ -60,14 +67,14 @@ const ProjectCard = ({ project }: { project: Project; }) => {
 
 export default function RecentProjects() {
     const [mounted, setMounted] = useState(false);
-  
+
     useEffect(() => {
-       setMounted(true);
-     }, []);
-   
-     if (!mounted) {
-       return null;
-     }
+        setMounted(true);
+    }, []);
+
+    if (!mounted) {
+        return null;
+    }
 
     return <div className="w-full px-2 md:px-5 lg:px-15 xl:px-20 py-5 md:py-10 lg:py-15 xl:py-20 flex flex-col items-center gap-20 relative bg-gray-100">
         <div className="w-[90%] sm:w-[70%] md:w-[65%] lg:w-[40%]">
@@ -81,9 +88,11 @@ export default function RecentProjects() {
                 ))
             }
             <div className="mt-3 lg:mt-5 xl:mt-8 text-right cursor-pointer font-semibold">
-                <span className="bg-gradient-to-r from-[#57007B] to-[#F76680] text-transparent bg-clip-text text-xl">
-                    {"Read more >"}
-                </span>
+                <Link href="/portfolio?tab=all">
+                    <span className="bg-gradient-to-r from-[#57007B] to-[#F76680] text-transparent bg-clip-text text-xl">
+                        {"Read more >"}
+                    </span>
+                </Link>
             </div>
         </div>
     </div>

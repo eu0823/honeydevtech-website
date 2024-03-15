@@ -26,7 +26,7 @@ export default function Footer() {
                 <Link href="/aboutus" className="hover:underline">About Us</Link>
                 <Link href="/services" className="hover:underline">Services</Link>
                 <Link href="/portfolio" className="hover:underline">Portfolio</Link>
-                <Link href="/blog" className="hover:underline">Blog</Link>
+                {/* <Link href="/blog" className="hover:underline">Blog</Link> */}
             </div>
             <div className="col-span-3">
                 <h1 className="text-xl font-bold">
@@ -55,7 +55,7 @@ export default function Footer() {
                     </a>
                 </p>
             </div>
-            <ul className="flex space-x-3 md:absolute right-20 bottom-20">
+            <ul className="flex space-x-3 md:absolute lg:right-20 bottom-20">
                 <li>
                     <a
                         href="https://www.facebook.com/profile.php?id=61556304436322&mibextid=rS40aB7S9Ucbxw6v"
@@ -156,6 +156,6 @@ export default function Footer() {
         <div className="border-t-2 w-full py-6 flex justify-center items-center text-[14px]">
             © 2024 Copyright by HoneyDevTech. All rights reserved.
         </div>
-        <BackToTop right="30px" bottom="40px" />
+        <BackToTop right="32px" bottom="40px" />
     </div>
 }
