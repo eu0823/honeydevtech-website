@@ -1,5 +1,8 @@
+'use client'
+
 import Image from "next/image";
 import Link from "next/link";
+import BackToTop from "./BackTotop";
 
 export default function Footer() {
 
@@ -38,8 +41,8 @@ export default function Footer() {
                 <p className="mt-2">
                     +212647924544
                 </p>
-                <p className="mt-2">
-                    +44 117 318 4324
+                <p className="mt-2 hover:text-blue-700 hover:underline cursor-pointer">
+                    root@honeydevtech.com
                 </p>
                 <p className="mt-2 hover:text-blue-700 hover:underline">
                     <a href="https://discord.gg/d2MNjXEFa6" target="_blank">
@@ -153,5 +156,6 @@ export default function Footer() {
         <div className="border-t-2 w-full py-6 flex justify-center items-center text-[14px]">
             © 2024 Copyright by HoneyDevTech. All rights reserved.
         </div>
+        <BackToTop right="30px" bottom="40px" />
     </div>
 }

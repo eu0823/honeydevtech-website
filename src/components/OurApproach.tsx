@@ -1,6 +1,18 @@
+"use client"
+
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function OurApproach() {
+    const [mounted, setMounted] = useState(false);
+  
+    useEffect(() => {
+       setMounted(true);
+     }, []);
+   
+     if (!mounted) {
+       return null;
+     }
 
     return <div className="w-full px-2 md:px-10 lg:px-15 py-20 flex flex-col items-center gap-20 relative bg-gray-100">
         <div className="w-[90%] sm:w-[70%] md:w-[65%] lg:w-[40%]">
@@ -11,7 +23,7 @@ export default function OurApproach() {
             <div className="flex flex-col items-center md:flex-row md:items-start gap-8 border-2 border-gray-300 px-8 py-12 bg-white">
                 <div>
                     <div className="rounded-[15px] shadow-lg p-5 w-[59] h-[56] bg-gradient-to-tr from-[#29272E] to-[#27272E]">
-                        <Image src="/images/rocket.png" alt="rocket" width={35} height={35} className="min-w-[35px]" />
+                        <Image src="/images/rocket.png" alt="rocket" width={35} height={35} className="min-w-[35px] h-auto" />
                     </div>
                 </div>
                 <div className="w-full flex flex-col gap-3">
@@ -22,7 +34,7 @@ export default function OurApproach() {
             <div className="flex flex-col items-center md:flex-row md:items-start gap-8 border-2 border-gray-300 px-8 py-12 bg-white">
                 <div>
                     <div className="rounded-[15px] shadow-lg p-5 w-[59] h-[56] bg-gradient-to-tr from-[#68DBF2] to-[#509CF5]">
-                        <Image src="/images/code.png" alt="rocket" width={35} height={35} className="min-w-[35px]" />
+                        <Image src="/images/code.png" alt="code" width={35} height={35} className="min-w-[35px]" />
                     </div>
                 </div>
                 <div className="w-full flex flex-col gap-3">
@@ -33,7 +45,7 @@ export default function OurApproach() {
             <div className="flex flex-col items-center md:flex-row md:items-start gap-8 border-2 border-gray-300 px-8 py-12 bg-white">
                 <div>
                     <div className="rounded-[15px] shadow-lg p-5 w-[59] h-[56] bg-gradient-to-tr from-[#FF92AE] to-[#FF3D9A]">
-                        <Image src="/images/heart.png" alt="rocket" width={35} height={35} className="min-w-[35px]" />
+                        <Image src="/images/heart.png" alt="heart" width={35} height={35} className="min-w-[35px]" />
                     </div>
                 </div>
                 <div className="w-full flex flex-col gap-3">
@@ -44,7 +56,7 @@ export default function OurApproach() {
             <div className="flex flex-col items-center md:flex-row md:items-start gap-8 border-2 border-gray-300 px-8 py-12 bg-white">
                 <div>
                     <div className="rounded-[15px] shadow-lg p-5 w-[59] h-[56] bg-gradient-to-tr from-[#67E9F1] to-[#24E795]">
-                        <Image src="/images/shield.png" alt="rocket" width={35} height={35} className="min-w-[35px]" />
+                        <Image src="/images/shield.png" alt="shield" width={35} height={35} className="min-w-[35px]" />
                     </div>
                 </div>
                 <div className="w-full flex flex-col gap-3">
@@ -55,7 +67,7 @@ export default function OurApproach() {
             <div className="flex flex-col items-center md:flex-row md:items-start gap-8 border-2 border-gray-300 px-8 py-12 bg-white">
                 <div>
                     <div className="rounded-[15px] shadow-lg p-5 w-[59] h-[56] bg-gradient-to-tr from-[#FFEF5E] to-[#F7936F]">
-                        <Image src="/images/success.png" alt="rocket" width={35} height={35} className="min-w-[35px]" />
+                        <Image src="/images/success.png" alt="success" width={35} height={35} className="min-w-[35px]" />
                     </div>
                 </div>
                 <div className="w-full flex flex-col gap-3">
@@ -66,7 +78,7 @@ export default function OurApproach() {
             <div className="flex flex-col items-center md:flex-row md:items-start gap-8 border-2 border-gray-300 px-8 py-12 bg-white">
                 <div>
                     <div className="rounded-[15px] shadow-lg p-5 w-[59] h-[56] bg-gradient-to-tr from-[#F76680] to-[#57007B]">
-                        <Image src="/images/padlock.png" alt="rocket" width={35} height={35} className="min-w-[35px]" />
+                        <Image src="/images/padlock.png" alt="padlock" width={35} height={35} className="min-w-[35px]" />
                     </div>
                 </div>
                 <div className="w-full flex flex-col gap-3">

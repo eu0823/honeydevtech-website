@@ -81,7 +81,7 @@ export default function WhyLoveUs() {
             {
                 feedbacks.map((feedback: Feedback, index: number) => (
                     <div className={`${index % 4 === 0 ? "hidden sm:flex" : "flex"} flex-col items-center ${ index !== current ? "mt-3 opacity-70" : "gap-2"}`} key={index}>
-                        <Image src="https://i.pravatar.cc/85" className="rounded-full" alt="avatar" width={current === index ? 100 : 85} height={current === index ? 100 : 85} />
+                        <Image src={"/images/avatar/" + (index + 1) + ".png"} className="rounded-full" alt="avatar" width={current === index ? 100 : 85} height={current === index ? 100 : 85} />
                         <Rating>
                             <RatingStar />
                             <RatingStar />

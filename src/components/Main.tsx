@@ -2,6 +2,7 @@
 
 import { Button } from "flowbite-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Main() {
 
@@ -15,7 +16,9 @@ export default function Main() {
                     We help build and manage a team of world-class developers to bring your vision to life
                 </p>
                 <div className="mt-5 flex justify-center sm:justify-start sm:text-left w-full">
-                    <Button color="blue">{"Let's get started!"}</Button>
+                    <Link href="/portfolio">
+                        <Button color="blue">{"Let's get started!"}</Button>
+                    </Link>
                 </div>
             </div>
             <div className="order-1 sm:order-2 flex justify-center">

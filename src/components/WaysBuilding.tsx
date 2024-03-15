@@ -2,6 +2,7 @@
 
 import { useWindowSize } from "@react-hook/window-size";
 import { Timeline } from "flowbite-react";
+import { useEffect, useState } from "react";
 
 const CalenderIcon = () => <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -55,8 +56,17 @@ const approach: approachTypeItem[] = [
 ];
 
 export default function WaysBuilding() {
+    const [mounted, setMounted] = useState(false);
+  
+    useEffect(() => {
+       setMounted(true);
+     }, []);
+     const [width] = useWindowSize();
+   
+     if (!mounted) {
+       return null;
+     }
 
-    const [width] = useWindowSize();
 
     return <div className="w-full px-2 md:px-5 lg:px-10 xl:px-20 py-20 flex flex-col items-center gap-20 relative">
         <div className="w-[90%] sm:w-[70%] md:w-[65%] lg:w-[40%]">

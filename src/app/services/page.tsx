@@ -7,8 +7,7 @@ export default function Services() {
                     Designed for business teams like yours
                 </h2>
                 <p className="text-gray-500 sm:text-xl dark:text-gray-400">
-                    Here at Flowbite we focus on markets where technology, innovation, and
-                    capital can unlock long-term value and drive economic growth.
+                At our company, we prioritize markets where technology, innovation, and capital can unleash lasting value and propel economic expansion.
                 </p>
             </div>
             <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">

@@ -3,42 +3,16 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 type Kind = "all" | "web" | "bot" | "blockchain" | "ue" | "other";
-import { web_portfolio, blockchain_portfolio, PortfolioItem } from "./data";
+import { portfolio, PortfolioItem } from "./data";
 import Link from "next/link";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { Badge } from "flowbite-react";
 
+const colors: string[] = ["info", "pink", "failure", "success", "warning", "indigo"];
 
 export default function Portfolio() {
 
     const [kind, setKind] = useState<Kind>("all");
-    const [portfolio, setPortfolio] = useState<PortfolioItem[]>(web_portfolio);
-
-    useEffect(() => {
-        switch (kind) {
-            case "all":
-                setPortfolio([...web_portfolio, ...blockchain_portfolio].sort(() => Math.random() - 0.5));
-                break;
-            case "web":
-                setPortfolio(web_portfolio.sort(() => Math.random() - 0.5));
-                break;
-            case "bot":
-                setPortfolio([]);
-                break;
-            case "blockchain":
-                setPortfolio(blockchain_portfolio.sort(() => Math.random() - 0.5));
-                break;
-            case "ue":
-                setPortfolio([]);
-                break;
-            case "other":
-                setPortfolio([]);
-                break;
-            default:
-                setPortfolio([]);
-                break;
-        }
-    }, [kind])
 
     return (
         <div className="w-full py-[74px] px-2 md:px-5 lg:px-10 xl:px-20">
@@ -104,34 +78,43 @@ export default function Portfolio() {
 
             <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10">
                 {
-                    portfolio.map((item, index) => {
+                    portfolio.filter((item: PortfolioItem) => kind === "all" || item.type === kind).map((item: PortfolioItem, index: number) => {
                         return (
                             <div className="w-full h-auto rounded-lg overflow-hidden border flex flex-col pb-3 gap-4 hover:border-[black] bg-gray-100 shadow-lg" key={index}>
-                                <Link href={"http://" + item.website} target="_blank">
-                                    <Image className="hover:opacity-80 cursor-pointer border-b" src={"/images/portfolio/" + item.imageLink} width={400} height={300} alt={item.imageLink} />
-                                </Link>
-                                <div className="flex justify-between items-center">
-                                    <Link href={"http://" + item.website} target="_blank">
+                                {
+                                    item.fileType === "image" ? <Link href={(item.type !== "bot" && item.type !== "ue") ? item.website : "#"} target="_blank">
+                                        <Image className="hover:opacity-80 cursor-pointer border-b" src={"/images/portfolio/" + item.imageLink} width={400} height={300} alt={item.imageLink} />
+                                    </Link> : <video className="hover:opacity-80 cursor-pointer border-b" controls>
+                                        <source src={"/images/portfolio/" + item.imageLink} type="video/mp4" />
+                                    </video>
+                                }
+                                {
+                                    (item.type !== "bot" && item.type !== "ue") ? <Link href={item.website} target="_blank">
                                         <div className="flex justify-start items-center px-4 py-2 gap-2">
                                             <Icon icon="gg:website" />
                                             <h1 className="text-xl font-bold">{item.website}</h1>
                                         </div>
-                                    </Link>
-                                    <Badge size="md" color="success">Web</Badge>
-                                </div>
-                                <div className="flex gap-2 px-2 mb-2">
-                                    <Badge color="info">Bridge</Badge>
-                                    <Badge color="gray">DAO</Badge>
-                                    <Badge color="failure">React</Badge>
-                                    <Badge color="success">ExpressJS</Badge>
-                                    <Badge color="warning">Solidity</Badge>
-                                    <Badge color="indigo">Next.js</Badge>
+                                    </Link> : <div className="flex justify-start items-center px-4 py-2 gap-2">
+                                        <Icon icon="gg:website" />
+                                        <h1 className="text-xl font-bold">{item.website}</h1>
+                                    </div>
+                                }
+
+                                <div className="flex justify-between items-center">
+                                    <div className="flex items-center gap-2 px-2 mb-2">
+                                        {
+                                            item.keywords.map((keyword: string, idx: number) => (
+                                                <Badge color={colors[idx]} key={idx}>{keyword}</Badge>
+                                            ))
+                                        }
+                                    </div>
+                                    <Badge size="md" color="purple" className="uppercase">{item.type}</Badge>
                                 </div>
                             </div>
                         );
                     })
                 }
             </div>
-        </div>
+        </div >
     );
 }
