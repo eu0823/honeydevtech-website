@@ -45,7 +45,10 @@ const projects: Project[] = [
 ];
 
 const ProjectCard = ({ project }: { project: Project; }) => {
-    return <div className={`grid grid-cols-1 lg:grid-cols-2 bg-[${project.bgColor}] border border-[${project.borderColor}] rounded-tl-[15px] rounded-bl-[15px] rounded-br-[30px] rounded-tr-[30px]`}>
+    return <div
+        className={`grid grid-cols-1 lg:grid-cols-2 border rounded-tl-[15px] rounded-bl-[15px] rounded-br-[30px] rounded-tr-[30px]`}
+        style={{ backgroundColor: project.bgColor, borderColor: project.borderColor }}
+    >
         <div className="flex items-center">
             <Image src={project.imageSrc} alt={project.alt} width={1000} height={700} className="w-full" />
         </div>
