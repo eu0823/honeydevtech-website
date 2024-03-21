@@ -25,7 +25,7 @@ const feedbacks = [
         "avatar": "avatar_url_2",
         "rating": 5,
         "text": "I am extremely impressed with the blockchain development services provided by HoneyDevTech. They delivered a secure and efficient solution for our business, and their team was professional and knowledgeable throughout the entire process. Highly recommended!",
-        "name": "Jane Smith",
+        "name": "Tim Simon",
         "role": "CEO"
     },
     {
