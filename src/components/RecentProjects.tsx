@@ -37,7 +37,7 @@ const projects: Project[] = [
         "imageSrc": "/images/services/game_service.jpg",
         "alt": "case study 3",
         "kind": "game",
-        "title": "UE & Game Development",
+        "title": "Unity & UE Game Development",
         "description": "Born from a passion for immersive gaming experiences, Unreal Engine Studios is a force to be reckoned with in game development. With a commitment to pushing the boundaries of visual fidelity and gameplay innovation, they create unforgettable virtual worlds. Backed by years of technical expertise and a talented team, Unreal Engine Studios is redefining interactive entertainment.",
         "bgColor": "#FFF4F4",
         "borderColor": "#E7DAED"

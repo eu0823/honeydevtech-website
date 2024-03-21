@@ -18,7 +18,7 @@ const feedbacks = [
         "avatar": "avatar_url_1",
         "rating": 5,
         "text": "Without any doubt I recommend HoneyDevTech as one of the best web and blockchain development agencies. One of the best agencies I’ve came across so far. Wouldn’t be hesitated to introduce their work to someone else.",
-        "name": "John Doe",
+        "name": "John Webster",
         "role": "Marketing Manager"
     },
     {
@@ -90,7 +90,7 @@ export default function WhyLoveUs() {
                             <RatingStar />
                         </Rating>
                         <h1 className={`text-md ${ index === current ? "font-bold" : "font-semibold"}`}>{feedback.name}</h1>
-                        <h3 className="text-sm">{feedback.role}</h3>
+                        {/* <h3 className="text-sm">{feedback.role}</h3> */}
                     </div>
                 ))
             }

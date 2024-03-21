@@ -16,7 +16,7 @@ export default function Footer() {
                     </div>
                 </Link>
                 <div className="text-md max-w-96 mt-4">
-                    We offer Web, Blockchain, Automation bot, Unreal Engine and Game Development services.
+                    We offer Web, Blockchain, Automation bot, Unity and Unreal Engine Game Development services.
                 </div>
             </div>
             <div className="col-span-1 flex flex-col gap-3">

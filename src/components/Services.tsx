@@ -16,7 +16,7 @@ const services = [
     {
         id: 3,
         logo: "game.png",
-        title: "UE & Game Development",
+        title: "Unity & UE Game Development",
         content: "Unleash your creativity with Unreal Engine and Game Development. We're here to bring your game to life, offering immersive experiences and interactive storytelling in the digital entertainment era."
     },
 ];
