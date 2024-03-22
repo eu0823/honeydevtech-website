@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "HoneyDevTech",
-  description: "Website, blockchain, unreal engine and game development company",
+  description: "Website, blockchain, unreal engine and game development agency",
   icons: {
     icon: '/images/logo.png',
   },
